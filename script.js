@@ -27,12 +27,12 @@ addBtn.addEventListener("click", function (event) {
     return;
   }
   if (inputNote.value === "") {
-    errorText.innerHTML = "Du måste skriva in något i text-fältet!";
+    errorText.innerHTML = "Du måste skriva in en anteckning!";
     event.preventDefault();
     return;
   }
   if (inputTitle.value === "") {
-    errorText.innerHTML = "Du måste skriva in något i text-fältet!";
+    errorText.innerHTML = "Du måste skriva in en titel";
     event.preventDefault();
     return;
   }
