@@ -1,0 +1,190 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header styling */
+#hOne {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2b5876;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form container */
+#divBoxInput {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#divBoxInput p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Input fields */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2b5876;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #2b5876;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4e92bf;
+}
+
+button:active {
+  background-color: #234156;
+}
+
+/* Notes display box */
+#divBoxOne {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  #hOne {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Styling for dynamically created notes */
+.innerDivBox {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for notes */
+.innerDivBox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Note title and content styling */
+.innerDivBox h2 {
+  font-size: 1.5rem;
+  color: #2b5876;
+  margin-bottom: 8px;
+}
+
+.innerDivBox p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Styling for note buttons */
+.innerDivBox button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background-color: #2b5876;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover and active states */
+.innerDivBox button:hover {
+  background-color: #4e92bf;
+}
+
+.innerDivBox button:active {
+  background-color: #234156;
+}
+
+/* Ready check button specific styling */
+.innerDivBox button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Completed note styling */
+.innerDivBox.done {
+  background-color: #e7f9e7;
+  border-color: #a8d5a8;
+}
+
+.innerDivBox.done h2,
+.innerDivBox.done p {
+  color: #2e7d2e;
+}
+
+/* Responsive adjustments for notes */
+@media (max-width: 600px) {
+  .innerDivBox {
+    padding: 10px;
+  }
+
+  .innerDivBox h2 {
+    font-size: 1.2rem;
+  }
+
+  .innerDivBox button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
