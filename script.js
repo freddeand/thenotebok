@@ -87,12 +87,14 @@ addBtn.addEventListener("click", function (event) {
   innerDivBox.appendChild(editBtn);
 
   editBtn.addEventListener("click", function () {
+    let editDivBox = document.createElement("div");
+    innerDivBox.appendChild(editDivBox);
     let editInputTitle = document.createElement("input");
     let editNote = document.createElement("input");
     editInputTitle.placeholder = "titel";
     editNote.placeholder = "anteckning";
-    displayNotes.appendChild(editInputTitle);
-    displayNotes.appendChild(editNote);
+    editDivBox.appendChild(editInputTitle);
+    editDivBox.appendChild(editNote);
 
     // current input.
     editInputTitle.value = noteData.title;
@@ -100,7 +102,7 @@ addBtn.addEventListener("click", function (event) {
     // new button for submit edit.
     let submitEditBtn = document.createElement("button");
     submitEditBtn.textContent = "Tryck in ny text";
-    displayNotes.appendChild(submitEditBtn);
+    editDivBox.appendChild(submitEditBtn);
 
     submitEditBtn.addEventListener("click", function () {
       // updated text
@@ -192,10 +194,12 @@ function loadNotes() {
     innerDivBox.appendChild(editBtn);
 
     editBtn.addEventListener("click", function () {
+      let editDivBox = document.createElement("div");
+      innerDivBox.appendChild(editDivBox);
       let editInputTitle = document.createElement("input");
       let editNote = document.createElement("input");
-      displayNotes.appendChild(editInputTitle);
-      displayNotes.appendChild(editNote);
+      editDivBox.appendChild(editInputTitle);
+      editDivBox.appendChild(editNote);
 
       //
       inputTitle.value = noteData.title;
@@ -203,7 +207,7 @@ function loadNotes() {
 
       let submitEditBtn = document.createElement("button");
       submitEditBtn.textContent = "Tryck in ny text";
-      displayNotes.appendChild(submitEditBtn);
+      editDivBox.appendChild(submitEditBtn);
 
       submitEditBtn.addEventListener("click", function () {
         // Update the noteData with the new values
